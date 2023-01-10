@@ -195,7 +195,6 @@ html{
     height: 67px;
     left: 240px;
     top: 885px;
-
 }
 .boton-encriptar{
     display: flex;
@@ -203,51 +202,73 @@ html{
     align-items: flex-start;
     padding: 24px;
     gap: 8px;
-    
     width: 328px;
     height: 67px;
-    
-    /* Dark blue/dark-blue-300 */
-    
+   /* Dark blue/dark-blue-300 */
     background: #0A3871;
     border-radius: 24px;
-    
-    /* Inside auto layout */
-    
+       /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
-
     /* White */    
-
 }
 .boton-encriptar p{
     width: 280px;
     height: 19px;
-
     font-family:Arial, Helvetica, sans-serif;
     font-style:normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-
     /* White */
-
     color: #FFFFFF;
-
-
     /* Inside auto layout */
-
     flex: none;
     order: 0;
     flex-grow: 1;
 }
 .boton-desencriptar{
-
+    box-sizing: border-box;
+/* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    /* Light gray */
+    background: #D8DFE8;
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.boton-desencriptar p{
+    width: 280px;
+    height: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.boton-copiar{
     box-sizing: border-box;
 
-/* Auto layout */
+    /* Auto layout */
 
     display: flex;
     flex-direction: row;
@@ -255,29 +276,22 @@ html{
     padding: 24px;
     gap: 8px;
 
-    width: 328px;
+    position: absolute;
+    width: 336px;
     height: 67px;
+    left: 1032px;
+    top: 885px;
 
-    /* Light gray */
-
-    background: #D8DFE8;
     /* Dark blue/dark-blue-300 */
 
     border: 1px solid #0A3871;
     border-radius: 24px;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
-.boton-desencriptar p{
-    
-    width: 280px;
+.boton-copiar p{
+    width: 288px;
     height: 19px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -294,5 +308,4 @@ html{
     flex: none;
     order: 0;
     flex-grow: 1;
-
 }
