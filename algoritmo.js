@@ -68,6 +68,7 @@ function fdesencriptar(){
 }
 
 async function copyText() {
+     
     /* Seleccionar el texto */
     var texth = document.getElementById("texto-resultado").value;
     
@@ -79,3 +80,12 @@ async function copyText() {
       console.error('Failed to copy text: ', err);
     }
 }
+function copiartexto(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+  }
+  

@@ -47,7 +47,7 @@ html{
 .rectangulo{
     position: absolute;
     width: 400px;
-    height: 944px;
+    height: 644px;
     left: 1000px;
     top: 40px;
 
@@ -141,7 +141,7 @@ html{
     width: 229px;
     height: 18px;
     left: 240px;
-    top: 851px;
+    top: 651px;
 
 }
 .frame1 img{
@@ -190,7 +190,7 @@ html{
     width: 680px;
     height: 67px;
     left: 240px;
-    top: 885px;
+    top: 685px;
 }
 #boton-encriptar{
     display: flex;
@@ -295,7 +295,7 @@ html{
     width: 336px;
     height: 67px;
     left: 1032px;
-    top: 885px;
+    top: 685px;
 
     /* Dark blue/dark-blue-300 */
 
