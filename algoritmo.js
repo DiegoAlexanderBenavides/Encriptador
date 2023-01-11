@@ -1,6 +1,11 @@
-var bt= document.getElementById('boton-encriptar')
+var botonEncriptar= document.getElementById('boton-encriptar')
+var botonDesencriptar= document.getElementById('boton-desencriptar')
+var botonCopiar=document.getElementById('boton-copiar')
+botonDesencriptar.addEventListener('click',fdesencriptar,false);
 
-bt.addEventListener('click',fencriptar,false);
+botonEncriptar.addEventListener('click',fencriptar,false);
+botonCopiar.addEventListener('click',copyText,false);
+
 function fencriptar(){
    var texto= document.getElementById('texto-ingresado').value;
    texto=texto.split('');
@@ -26,4 +31,51 @@ function fencriptar(){
     document.getElementById("texto-resultado").innerHTML = texto;
    
 }
-bt.onclick="window.location.href=desktop2.html";
+function fdesencriptar(){
+   var texto= document.getElementById('texto-ingresado').value;
+   texto=texto.split('');
+   var resultado=[];
+   for (var i=0; i<texto.length+1;i++){
+    if(texto[i]=="a" && texto[i+1]=="i"){
+        resultado.push("a");
+        i=i+2;
+    }
+    if(texto[i]=="e"&&texto[i+1]=="n"&&texto[i+2]=="t"&&texto[i+3]=="e"&&texto[i+4]=="r"){
+        resultado.push("e");
+        i=i+5;
+    }
+    if(texto[i]=="i"&&texto[i+1]=="m"&&texto[i+2]=="e"&&texto[i+3]=="s"){
+        resultado.push("i");
+        i=i+4;
+    }
+    if(texto[i]=="o"&&texto[i+1]=="b"&&texto[i+2]=="e"&&texto[i+3]=="r"){
+        resultado.push("o");
+        i=i+4;
+    }
+    if(texto[i]=="u"&&texto[i+1]=="f"&&texto[i+2]=="a"&&texto[i+3]=="t"){
+        resultado.push("u");
+        i=i+3;
+    }
+    else{
+        resultado.push(texto[i]);
+    }
+   }
+
+   resultado=resultado.join('');
+   document.getElementById("texto-resultado").innerHTML = resultado;
+   
+
+}
+
+async function copyText() {
+    /* Seleccionar el texto */
+    var texth = document.getElementById("texto-resultado").value;
+    
+    try {
+      /* Copiar el texto seleccionado al portapapeles */
+      await navigator.clipboard.writeText(texth);
+      console.log(texth);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+}
