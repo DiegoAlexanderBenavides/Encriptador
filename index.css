@@ -33,7 +33,7 @@ html{
     color: #0A3871;
     border: none;
 }
-.texto-ingresado{
+#texto-ingresado{
     color: #0A3871;
     position: absolute;
     width: 577px;
@@ -196,7 +196,7 @@ html{
     left: 240px;
     top: 885px;
 }
-.boton-encriptar{
+#boton-encriptar{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -213,7 +213,7 @@ html{
     flex-grow: 0;
     /* White */    
 }
-.boton-encriptar p{
+#boton-encriptar p{
     width: 280px;
     height: 19px;
     font-family:Arial, Helvetica, sans-serif;
@@ -229,7 +229,7 @@ html{
     order: 0;
     flex-grow: 1;
 }
-.boton-desencriptar{
+#boton-desencriptar{
     box-sizing: border-box;
 /* Auto layout */
     display: flex;
@@ -249,7 +249,7 @@ html{
     order: 1;
     flex-grow: 0;
 }
-.boton-desencriptar p{
+#boton-desencriptar p{
     width: 280px;
     height: 19px;
     font-family: Arial, Helvetica, sans-serif;
@@ -265,7 +265,7 @@ html{
     order: 0;
     flex-grow: 1;
 }
-.boton-copiar{
+#boton-copiar{
     box-sizing: border-box;
 
     /* Auto layout */
@@ -287,7 +287,7 @@ html{
     border: 1px solid #0A3871;
     border-radius: 24px;
 }
-.boton-copiar p{
+#boton-copiar p{
     width: 288px;
     height: 19px;
 
