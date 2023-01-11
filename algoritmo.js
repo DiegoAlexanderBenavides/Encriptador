@@ -23,9 +23,7 @@ function fencriptar(){
 
    }
     texto=texto.join('');
-    console.log(texto);
+    document.getElementById("texto-resultado").innerHTML = texto;
    
 }
 bt.onclick="window.location.href=desktop2.html";
-
-
