@@ -36,29 +36,35 @@ function fdesencriptar(){
    texto=texto.split('');
    var resultado=[];
    for (var i=0; i<texto.length+1;i++){
+    console.log(i);
+    var numeroDeSaltos=0;
     if(texto[i]=="a" && texto[i+1]=="i"){
         resultado.push("a");
-        i=i+2;
+        numeroDeSaltos=1;
+
     }
-    if(texto[i]=="e"&&texto[i+1]=="n"&&texto[i+2]=="t"&&texto[i+3]=="e"&&texto[i+4]=="r"){
+    else if(texto[i]=="e"&&texto[i+1]=="n"&&texto[i+2]=="t"&&texto[i+3]=="e"&&texto[i+4]=="r"){
         resultado.push("e");
-        i=i+5;
+        numeroDeSaltos=4;
     }
-    if(texto[i]=="i"&&texto[i+1]=="m"&&texto[i+2]=="e"&&texto[i+3]=="s"){
+    else if(texto[i]=="i"&&texto[i+1]=="m"&&texto[i+2]=="e"&&texto[i+3]=="s"){
         resultado.push("i");
-        i=i+4;
+        numeroDeSaltos=3;
     }
-    if(texto[i]=="o"&&texto[i+1]=="b"&&texto[i+2]=="e"&&texto[i+3]=="r"){
+    else if(texto[i]=="o"&&texto[i+1]=="b"&&texto[i+2]=="e"&&texto[i+3]=="r"){
         resultado.push("o");
-        i=i+4;
+        numeroDeSaltos=3;
     }
-    if(texto[i]=="u"&&texto[i+1]=="f"&&texto[i+2]=="a"&&texto[i+3]=="t"){
+    else if(texto[i]=="u"&&texto[i+1]=="f"&&texto[i+2]=="a"&&texto[i+3]=="t"){
         resultado.push("u");
-        i=i+3;
+        numeroDeSaltos=3;
     }
     else{
         resultado.push(texto[i]);
+        console.log(i+"paso")
     }
+    i=i+numeroDeSaltos;
+    
    }
 
    resultado=resultado.join('');
@@ -70,22 +76,13 @@ function fdesencriptar(){
 async function copyText() {
      
     /* Seleccionar el texto */
-    var texth = document.getElementById("texto-resultado").value;
-    
+    var texth = document.getElementById("texto-resultado");
+    var text = texth.textContent;
     try {
       /* Copiar el texto seleccionado al portapapeles */
-      await navigator.clipboard.writeText(texth);
-      console.log(texth);
+      await navigator.clipboard.writeText(text);
+      console.log(text);
     } catch (err) {
       console.error('Failed to copy text: ', err);
     }
 }
-function copiartexto(text) {
-    var textArea = document.createElement("textarea");
-    textArea.value = text;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textArea);
-  }
-  
