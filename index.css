@@ -29,10 +29,6 @@ html{
     top: 0%;
     bottom: 0%;
 }
-.caja-de-texto{
-    color: #0A3871;
-    border: none;
-}
 #texto-ingresado{
     color: #0A3871;
     position: absolute;
